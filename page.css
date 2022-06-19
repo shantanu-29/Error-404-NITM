@@ -1,0 +1,326 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;1,100;1,300&display=swap");
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  -webkit-transition: .2s linear;
+  transition: .2s linear;
+}
+.page-1 {
+    background: center/cover no-repeat url("https://i.ytimg.com/vi/L9Z8Ty2-3xk/maxresdefault.jpg");
+  }
+  
+  .page-2 {
+    background: center/cover no-repeat url("https://images.unsplash.com/photo-1543838244-8c6ca03cb689?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80");
+  }
+  
+  .page-3 {
+    background: left/cover no-repeat url("https://ghanatalksbusiness.com/wp-content/uploads/2017/02/larabanga.jpg");
+  }
+  
+  .page-4 {
+    background: center/cover no-repeat url("https://cdn.foodism.co.uk/gallery/5ae05eb95c137.jpeg");
+  }
+  
+  .page-5 {
+    background: left/cover no-repeat url("https://kumasiafrobeat.com/wp-content/uploads/2015/12/Kumasi-20141004-LR-_MG_6563b.jpg");
+  }
+
+  .navbar .logo {
+    /* margin-right: auto; */
+    font-size: 2.5rem;
+    color: #10221b;
+    font-weight: bolder;
+    margin-left: 20px;
+  }
+  
+  .navbar .logo i {
+    color: #219150;
+  }
+  
+  .navbar .navbar a {
+    margin-left: 2rem;
+    font-size: 1.7rem;
+    color: #10221b;
+  }
+  
+  .navbar .navbar a:hover {
+    color: #219150;
+  }
+  
+  .navbar .icons a,
+.navbar .icons div {
+  font-size: 2.5rem;
+  margin-left: 2rem;
+  cursor: pointer;
+  color: #10221b;
+}
+
+.navbar .icons a:hover,
+.navbar .icons div:hover {
+  color: #219150;
+}
+  body {
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    overflow-x: hidden;
+  }
+  
+  .navbar {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    top: 0px;
+    height: 80px;
+    width: 100%;
+    background: whitesmoke;
+    box-shadow: 0px 1px 1px #10101050;
+    z-index: 2;
+    transition: all 500ms ease;
+  }
+  .navbar #logo {
+    font-size: 4em;
+    padding: 15px;
+    background: center/contain repeat url("https://cocoafromghana.org/wp-content/uploads/2017/01/Twitter_GHANA_Kente_beeld-03-Nkyimkyim.jpg");
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 10%;
+    -webkit-animation: colorize 2500ms ease-out forwards;
+            animation: colorize 2500ms ease-out forwards;
+    transition: background-size 1s ease, transform 100ms ease, filter 500ms ease;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+  }
+  .navbar #logo:hover {
+    transform: scale(1.05);
+    filter: hue-rotate(180deg);
+  }
+  .navbar #links {
+    position: relative;
+    display: flex;
+    margin-left: auto;
+    margin-right: 10px;
+  }
+  .navbar #links a {
+    text-decoration: none;
+    color: black;
+    padding: 8px;
+    font-size: 1.25em;
+  }
+  .navbar #links a:hover {
+    color: green;
+  }
+  @-webkit-keyframes colorize {
+    100% {
+      background-size: 100%;
+    }
+  }
+  @keyframes colorize {
+    100% {
+      background-size: 100%;
+    }
+  }
+  @media screen and (max-width: 950px) {
+    .navbar #logo {
+      font-size: 2em;
+    }
+    .navbar #links a {
+      font-size: 1em;
+    }
+  }
+  
+  /*Mobile UI*/
+  @media screen and (max-width: 650px) {
+    .navbar {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .navbar #logo {
+      padding: 0px;
+      width: 100%;
+      font-size: 2em;
+      text-align: center;
+    }
+    .navbar #links {
+      width: 100%;
+      justify-content: space-around;
+      margin: auto;
+    }
+    .navbar #links a {
+      font-size: 15px;
+    }
+  }
+  main {
+    position: relative;
+    display: flex;
+    border: none;
+    margin-top: 80px;
+    width: 100%;
+    height: 600px;
+  }
+  
+  .segment {
+    position: relative;
+    display: flex;
+    flex: 2;
+    justify-content: flex-end;
+    align-items: flex-end;
+    position: relative;
+    width: 500px;
+    min-width: 100px;
+    min-height: 600px;
+    box-shadow: -1px 1px 10px black;
+    transition: all 250ms ease 100ms;
+    z-index: 1;
+  }
+  .segment span {
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+    color: whitesmoke;
+    height: 1.2em;
+    width: 0px;
+    font-size: 0px;
+    background: #10101099;
+    border-radius: 4px;
+    padding: 5px;
+    margin: 10px;
+    opacity: 0;
+    transition: height 100ms ease, opacity 100ms ease 250ms;
+  }
+  .segment div {
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+    margin: 10px;
+    width: auto;
+    background: #10101050;
+    color: whitesmoke;
+    padding: 5px;
+    font-size: 1em;
+    font-weight: bold;
+    height: 1.2em;
+    border-right: solid white 4px;
+    border-bottom-right-radius: 4px;
+    text-align: right;
+    transition: left 100ms ease-out 250ms;
+  }
+  
+  .segment:hover {
+    flex: 100%;
+  }
+  .segment:hover span {
+    opacity: 1;
+    font-size: 1em;
+    padding: 25px;
+    height: auto;
+    width: auto;
+    border-bottom: solid #ffffff 4px;
+    border-right: solid #ffffff 4px;
+    z-index: 2;
+  }
+  .segment:hover div {
+    z-index: 1;
+  }
+  
+  /*Mobile UI*/
+  @media screen and (max-width: 650px) {
+    main {
+      flex-direction: column;
+      border: none;
+      margin-top: 80px;
+      width: 100%;
+      height: auto;
+    }
+  
+    .segment {
+      width: 100%;
+      min-height: 250px;
+    }
+    .segment span {
+      opacity: 1;
+      font-size: 1em;
+      padding: 25px;
+      height: auto;
+      width: auto;
+      border-bottom: solid #ffffff 4px;
+      border-right: solid #ffffff 4px;
+      z-index: -1;
+    }
+    .segment div {
+      border-bottom: solid #ffffff 4px;
+    }
+  }
+  footer {
+    display: flex;
+    flex-grow: 1;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 150px;
+  }
+  footer div {
+    width: 250px;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  footer div #book-now {
+    display: block;
+    margin: auto;
+    position: relative;
+    min-width: 250px;
+    outline: none;
+    border-radius: 0.25rem;
+    border: none;
+    box-shadow: 0 0 0 2px crimson;
+    padding: 15px;
+    color: black;
+    font-weight: bold;
+    background-color: red;
+    overflow: hidden;
+    transition: background 500ms ease 200ms, transform 250ms ease-out, box-shadow 500ms ease-out 250ms;
+    z-index: 1;
+  }
+  footer div #book-now:after {
+    content: "";
+    position: absolute;
+    top: 0%;
+    right: 110%;
+    width: 150%;
+    height: 100%;
+    background: gold;
+    z-index: -1;
+    transform: skew(-25deg);
+    transition: all 1s ease;
+  }
+  footer div #book-now:hover {
+    box-shadow: 0 0 0 2px darkgreen;
+    background: green;
+    transform: translateY(-3px);
+  }
+  footer div #book-now:hover:after {
+    right: -200%;
+  }
+  
+  footer:before {
+    content: "";
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    height: 100%;
+    border: solid;
+    background: url("https://rlv.zcache.com/adinkra_african_symbols_neck_tie-r4b95132d66334c56b7011076f7468173_z5ndj_307.jpg?rlvnet=1&rvtype=content");
+    opacity: 0.1;
+  }
